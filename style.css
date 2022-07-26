@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Grandstander', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+header {
+
+    height: 50px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+
+}
+
+.header {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+
+form {
+    width: 45%;
+
+    margin-right: 10px;
+}
+
+.container_form {
+
+    background-color: #F6F6F6;
+
+    padding-top: 50px;
+    padding-left: 5px;
+
+    border: 1px solid rgb(217, 213, 213);
+}
+
+.container_form div {
+
+    margin-bottom: 10px;
+}
+
+input {
+    width: 97%;
+    height: 50px;
+    outline: none;
+    border: none;
+}
+
+select {
+    width: 97%;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+textarea {
+    width: 97%;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+}
+
+label {
+    color: #919FF3;
+    font-size: 18px;
+
+}
+
+
+.form_title {
+
+    height: 40px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.choisir_btn button {
+
+    background-color: #E3E3E3;
+    padding: 10px;
+    font-weight: 400;
+    color: black;
+    margin-left: 10px;
+    border: none;
+}
+
+.container__btns {
+
+    margin-top: 90px;
+    margin-left: 10px;
+    padding-bottom: 15px;
+}
+
+.creer_btn {
+
+    padding: 10px 150px;
+    color: white;
+    font-weight: 500;
+    background-color: blue;
+    font-size: 16px;
+}
+
+.rénit_btn {
+    padding: 10px 150px;
+    color: white;
+    font-weight: 500;
+    background-color: red;
+    font-size: 16px;
+    margin-left: 33px;
+
+}
+
+
+.section_listeContact {
+
+    width: 53%;
+    border: 1px solid rgb(217, 213, 213);
+
+}
