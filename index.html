@@ -29,7 +29,7 @@
 
     <section class="container">
 
-        <form>
+        <form id="form">
 
             <div class="form_title">
                 Formulaire de contact
@@ -39,20 +39,20 @@
 
                 <div>
                     <label for="name">Prénom</label> <br />
-                    <input type="text">
+                    <input id="premon" type="text">
                 </div>
 
                 <div>
                     <label for="name">Nom</label> <br />
-                    <input type="text">
+                    <input id="names" type="text">
                 </div>
 
                 <div>
                     <label for="name">Groupe</label> <br />
-                    <select name="pays" id="pays">
+                    <select name="groupe" id="groupes">
 
-                        <!-- <option value="france">France</option>
-                        <option value="espagne">Espagne</option> -->
+                        <option value="france">France</option>
+                        <option value="espagne">Espagne</option>
                     </select>
                 </div>
 
@@ -63,28 +63,37 @@
                 </div>
 
                 <div class="choisir_btn">
-                    <button>Choisir un fichier</button>
-                    <div></div>
+
+                    <div>
+                        <label for="buton_choisir" class="label1">Choisir un fichier</label>
+                        <input accept="image/*" type="file" id="buton_choisir">
+                    </div>
+
+                    <div class="container_picture">
+                        <img class="class_image" id="image_choisie" src="" alt="Ton image" />
+                    </div>
                 </div>
 
                 <div class="container__btns">
-                    <button class="creer_btn"> Créer</button>
-                    <button class="rénit_btn">Réinit</button>
+                    <button id="creerId" type="submit" class="creer_btn"> Créer</button>
+                    <button id="reinitId" type="reset" class="rénit_btn">Réinit</button>
                 </div>
             </div>
 
 
         </form>
 
-        <div class="section_listeContact">
+        <div id="section" class="section_listeContact">
             <div class="form_title">
                 Liste de contact
             </div>
+
+         
         </div>
     </section>
 
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>

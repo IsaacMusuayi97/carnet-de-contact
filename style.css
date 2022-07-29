@@ -80,6 +80,7 @@ textarea {
     outline: none;
     border: none;
     margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 label {
@@ -101,14 +102,28 @@ label {
     font-weight: bold;
 }
 
-.choisir_btn button {
+.choisir_btn {
 
-    background-color: #E3E3E3;
-    padding: 10px;
-    font-weight: 400;
-    color: black;
-    margin-left: 10px;
-    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_picture {
+
+    margin-right: 50px;
+    border: 1px solid #F6F6F6;
+    height: 138px;
+    width: 138px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_picture img {
+    height: 138px;
+    width: 138px;
+
+
 }
 
 .container__btns {
@@ -143,4 +158,103 @@ label {
     width: 53%;
     border: 1px solid rgb(217, 213, 213);
 
+}
+
+
+label[for="buton_choisir"] {
+    background-color: #E3E3E3;
+    padding: 10px;
+
+    font-weight: 400;
+    color: black;
+    margin-left: 10px;
+    border: none;
+}
+
+#buton_choisir {
+    display: none;
+
+}
+
+.div_container {
+
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #C1D3FB;
+    color: #968e8e;
+    font-weight: 500;
+}
+
+.containerComment {
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+.container_nomPremon {
+
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+}
+
+.container_imag_comment {
+
+    display: flex;
+
+}
+
+.prenoms {
+
+    margin-left: 5px;
+}
+
+.image {
+
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.image_croix {
+
+    height: 30px;
+    width: 30px;
+    padding-top: 7px;
+    padding-right: 8px;
+}
+
+.groupe {
+
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width : 1400px) {
+.creer_btn  {
+    
+    padding: 10px 80px;
+    margin-left: 50px;
+}
+
+.rénit_btn {
+
+    padding: 10px 80px;
+}
+
+}
+
+@media screen and (max-width : 1400px) {
+
+    header {
+
+        
+    }
 }
