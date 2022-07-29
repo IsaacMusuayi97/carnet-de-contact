@@ -41,10 +41,12 @@ function addEvent() {
     recipient.id = id;
     img.classList.add('image');
     prenom.classList.add('prenoms');
+    div.classList.add('firstName')
     recipient.classList.add('div_container');
     nom.classList.add('prenoms');
     div1.classList.add('prenoms');
     div2.classList.add('groupe');
+    div3.classList.add('bio_class');
     div_input.classList.add('containerComment');
     container_nomPremon.classList.add('container_nomPremon');
     container_imag_comment.classList.add('container_imag_comment');
@@ -134,10 +136,21 @@ form.addEventListener('submit', function (event) {
     } else {
         // modifier
         const recipient = document.getElementById(selected);
-        recipient.querySelector('.container_nomPremon').innerText = "kdmflkmdl"
+        recipient.querySelector('.firstName').textContent = prenom.value;
+        recipient.querySelector('.prenoms').textContent = nom.value;
+        recipient.querySelector('.groupe').textContent = groupe.value;
+        recipient.querySelector('.bio_class').textContent = bio.value;
+        recipient.querySelector('.image').src = image.src;
+
+        reset();
+
+         button_creer.innerText = 'Créer';
+
     }
 
     selected = null;
+
+   
 })
 
 
