@@ -13,6 +13,182 @@ let link1 = "Red_X.svg";
 
 let selected = null;
 
+
+// expressions regulières
+
+form.fisrtname.addEventListener('change', function () {
+
+    validPrenom(this);
+});
+
+
+form.nom.addEventListener('change', function () {
+
+    validNom(this);
+});
+
+
+form.bio.addEventListener('change', function () {
+
+    validBio(this);
+})
+
+
+//     let premonRegExp = new RegExp('^[A-Z]{1}[a-z]{2,9}$', 'g'
+//     );
+
+//     let testPrenom = premonRegExp.test(inputPrenom.value);
+//     let small = inputPrenom.nextElementSibling;
+
+//    if (testPrenom == false) {
+
+//     small.innerHTML = "Inserrez un prenom correct";
+//     small.classList.add('text-fail');
+//    } else {
+
+//     small.classList.remove('text-fail');
+//     small.classList.add('text-success');
+//    }
+// }
+
+
+
+
+
+const validPrenom = function (inputPrenom) {
+
+
+
+    let msg;
+    let valid = false;
+
+    // Au moins 4 caracteres
+    if (inputPrenom.value.length < 4) {
+
+        msg = 'Le prénom doit contenir au moins 4 caracteres';
+    }
+
+    // Majuscule au debut 
+
+    else if (!/^[A-Z]/.test(inputPrenom.value)) {
+
+        msg = 'Le prénom doit commencer avec une majuscule';
+
+    }
+
+    else {
+        valid = true;
+    }
+
+    // Affichage
+    // Recuperation de la balise small
+
+
+
+    let small = inputPrenom.nextElementSibling;
+
+    if (valid) {
+
+        small.classList.remove('text-fail');
+        small.classList.add('text-success');
+        return true;
+
+    } else {
+
+        small.innerHTML = msg;
+        small.classList.add('text-fail');
+        return false;
+    }
+}
+
+
+const validNom = function (inputNom) {
+
+    let msg;
+    let valid = false;
+
+    // Au moins 4 caracteres
+    if (inputNom.value.length < 4) {
+
+        msg = 'Le nom doit contenir au moins 4 caracteres';
+    }
+
+    // Majuscule au debut 
+
+    else if (!/^[A-Z]/.test(inputNom.value)) {
+
+        msg = 'Le nom doit commencer avec une majuscule';
+
+    }
+
+    else {
+        valid = true;
+    }
+
+    // Affichage
+    // Recuperation de la balise small
+
+
+
+    let small = inputNom.nextElementSibling;
+
+    if (valid) {
+
+        small.classList.remove('text-fail');
+        small.classList.add('text-success');
+        return true;
+
+    } else {
+
+        small.innerHTML = msg;
+        small.classList.add('text-fail');
+        return false;
+    }
+}
+
+
+
+const validBio = function (textareaBio) {
+
+
+    let msg;
+    let valid = false;
+
+    // Au moins 4 caracteres
+    if (textareaBio.value.length < 100) {
+
+        msg = 'La biographie doit contenir au moins 100 caracteres';
+    }
+
+    else {
+        valid = true;
+    }
+
+    // Affichage
+    // Recuperation de la balise small
+
+
+
+    let small = textareaBio.nextElementSibling;
+
+    if (valid) {
+
+        small.classList.remove('text-fail');
+        small.classList.add('text-success');
+
+        return true;
+    } else {
+
+        small.innerHTML = msg;
+        small.classList.add('text-fail');
+
+        return false;
+    }
+}
+
+
+
+
 function addEvent() {
 
 
@@ -131,26 +307,32 @@ form.addEventListener('submit', function (event) {
 
     event.preventDefault();
 
-    if (selected == null) {
-        addEvent();
-    } else {
-        // modifier
-        const recipient = document.getElementById(selected);
-        recipient.querySelector('.firstName').textContent = prenom.value;
-        recipient.querySelector('.prenoms').textContent = nom.value;
-        recipient.querySelector('.groupe').textContent = groupe.value;
-        recipient.querySelector('.bio_class').textContent = bio.value;
-        recipient.querySelector('.image').src = image.src;
+    if (validPrenom(form.fisrtname) && validNom(form.nom) && validBio(form.bio)) {
 
-        reset();
 
-         button_creer.innerText = 'Créer';
+        if (selected == null) {
+            addEvent();
+        } else {
+            // modifier
+            const recipient = document.getElementById(selected);
+            recipient.querySelector('.firstName').textContent = prenom.value;
+            recipient.querySelector('.prenoms').textContent = nom.value;
+            recipient.querySelector('.groupe').textContent = groupe.value;
+            recipient.querySelector('.bio_class').textContent = bio.value;
+            recipient.querySelector('.image').src = image.src;
 
+            reset();
+
+            button_creer.innerText = 'Créer';
+
+        }
+
+        selected = null;
     }
 
-    selected = null;
 
-   
+
+
 })
 
 

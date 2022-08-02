@@ -238,7 +238,16 @@ label[for="buton_choisir"] {
 
 .firstName {
 
-    
+
+}
+
+.text-fail {
+    color: red;
+}
+
+.text-success {
+
+    display: none;
 }
 
 @media screen and (max-width : 1400px) {
@@ -255,10 +264,52 @@ label[for="buton_choisir"] {
 
 }
 
-@media screen and (max-width : 1400px) {
+@media screen and (max-width : 412px) {
 
     header {
 
-
+       width: 420px;
     }
+
+.section_listeContact {
+
+    width: 210px;
+
+}
+
+
+.creer_btn  {
+    
+    padding: 10px 10px;
+    margin-left: -5px;
+}
+
+.rénit_btn {
+
+    padding: 10px 10px;
+}
+
+
+.choisir_btn {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+}
+
+
+@media screen and (max-width : 375px) {
+
+   header {
+
+    width: 100%;
+
+   }
+
+   .form_title {
+
+    font-size: 6px;
+   }
+
 }
