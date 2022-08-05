@@ -17,83 +17,81 @@
 <body>
 
 
-    <header>
+    <div class="body">
 
-        <div class="header">
-            Répertoire de contact
-        </div>
-
-    </header>
+        <header class="header">
+                Répertoire de contact
+        </header>
 
 
 
-    <section class="container">
+        <section class="container">
 
-        <form id="form">
+            <form id="form">
 
-            <div class="form_title">
-                Formulaire de contact
-            </div>
-
-            <div class="container_form">
-
-                <div>
-                    <label for="name">Prénom</label> <br />
-                    <input id="premon" type="text" name="fisrtname">
-                    <small></small>
+                <div class="form_title">
+                    Formulaire de contact
                 </div>
 
-                <div>
-                    <label for="name">Nom</label> <br />
-                    <input id="names" type="text" name="nom">
-                    <small></small>
-                </div>
-
-                <div>
-                    <label for="name">Groupe</label> <br />
-                    <select name="groupe" id="groupes" name="groupe">
-
-                        <option value="france">France</option>
-                        <option value="espagne">Espagne</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="Bio">Bio</label> <br />
-                    <textarea class="bio_class" name="bio" id="bio" cols="20" rows="5"></textarea>
-                     <small></small>
-                </div>
-
-                <div class="choisir_btn">
+                <div class="container_form">
 
                     <div>
-                        <label for="buton_choisir" class="label1">Choisir un fichier</label>
-                        <input accept="image/*" type="file" id="buton_choisir">
+                        <label for="name">Prénom</label> <br />
+                        <input id="premon" type="text" name="fisrtname">
+                        <small></small>
                     </div>
 
-                    <div class="container_picture">
-                        <img class="class_image" id="image_choisie" src="" alt="Ton image" />
+                    <div>
+                        <label for="name">Nom</label> <br />
+                        <input id="names" type="text" name="nom">
+                        <small></small>
+                    </div>
+
+                    <div>
+                        <label for="name">Groupe</label> <br />
+                        <select name="groupe" id="groupes" name="groupe">
+
+                            <option value="france">France</option>
+                            <option value="espagne">Espagne</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="Bio">Bio</label> <br />
+                        <textarea class="bio_class" name="bio" id="bio" cols="20" rows="5"></textarea>
+                        <small></small>
+                    </div>
+
+                    <div class="choisir_btn">
+
+                        <div>
+                            <label for="buton_choisir" class="label1">Choisir un fichier</label>
+                            <input accept="image/*" type="file" id="buton_choisir">
+                        </div>
+
+                        <div class="container_picture">
+                            <img class="class_image" id="image_choisie" src="" alt="Ton image" />
+                        </div>
+                    </div>
+
+                    <div class="container__btns">
+                        <button id="creerId" type="submit" class="creer_btn"> Créer</button>
+                        <button id="reinitId" type="reset" class="rénit_btn">Réinit</button>
                     </div>
                 </div>
 
-                <div class="container__btns">
-                    <button id="creerId" type="submit" class="creer_btn"> Créer</button>
-                    <button id="reinitId" type="reset" class="rénit_btn">Réinit</button>
+
+            </form>
+
+            <div id="section" class="section_listeContact">
+                <div class="form_title">
+                    Liste de contact
                 </div>
+
+            
             </div>
-
-
-        </form>
-
-        <div id="section" class="section_listeContact">
-            <div class="form_title">
-                Liste de contact
-            </div>
-
-         
-        </div>
-    </section>
-
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>

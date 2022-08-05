@@ -155,7 +155,7 @@ const validBio = function (textareaBio) {
     let valid = false;
 
     // Au moins 4 caracteres
-    if (textareaBio.value.length < 100) {
+    if (textareaBio.value.length < 10) {
 
         msg = 'La biographie doit contenir au moins 100 caracteres';
     }
